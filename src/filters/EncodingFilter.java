@@ -20,14 +20,12 @@ public class EncodingFilter implements Filter {
      * Default constructor.
      */
     public EncodingFilter() {
-
     }
 
     /**
      * @see Filter#destroy()
      */
     public void destroy() {
-
     }
 
     /**
