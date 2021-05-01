@@ -26,7 +26,6 @@ public class ReportsEditServlet extends HttpServlet {
      */
     public ReportsEditServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     /**
@@ -43,13 +42,11 @@ public class ReportsEditServlet extends HttpServlet {
         if(r != null && login_employee.getId() == r.getEmployee().getId()) {
             request.setAttribute("report", r);
             request.setAttribute("_token", request.getSession().getId());
-            request.getSession().setAttribute("request_id", r.getId());
-
+            request.getSession().setAttribute("report_id", r.getId());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reports/edeit.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reports/edit.jsp");
         rd.forward(request, response);
-
     }
 
 }
